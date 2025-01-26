@@ -1,0 +1,357 @@
+:root {
+    --bg-color-light: #f9f9f9;
+    --text-color-light: #333333;
+    --bg-color-dark: #1a1a1a;
+    --text-color-dark: #f9f9f9;
+    --accent-color: #ff0000;
+    --card-bg: #ffffff;
+    --card-border: #dddddd;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    transition: all 0.3s;
+}
+
+body.dark-theme {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: white;
+}
+
+header h1 {
+    font-size: 24px;
+    text-align: center;
+    flex: 1;
+}
+
+header button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+main {
+    padding: 20px;
+}
+
+#listaProductos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0;
+}
+
+#listaProductos li {
+    list-style: none;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+#listaProductos li:hover {
+    transform: scale(1.05);
+    border-color: var(--accent-color);
+}
+
+#listaProductos img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Center products */
+#listaProductos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Cart container styling */
+#contenedorCarrito {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contenedorCarrito h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+#campoBusqueda {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Cart items list */
+#listaCarrito {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#listaCarrito li {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Ensure font color is always visible */
+body {
+    color: var(--text-color-light); /* Default to light mode text */
+}
+
+body.dark-theme {
+    color: var(--text-color-dark); /* Adjust for dark theme */
+}
+
+#contenedorCarrito, #campoBusqueda, #listaCarrito {
+    background-color: var(--card-bg);
+    color: inherit; /* Inherit color from parent for contrast */
+}
+
+header, footer {
+    background-color: var(--accent-color);
+    color: white; /* Ensure text is always visible against accent color */
+}
+
+#listaProductos li {
+    color: var(--text-color-light);
+}
+
+body.dark-theme #listaProductos li {
+    color: var(--text-color-dark);
+}
+
+/* Ensure product names are always visible */
+#listaProductos li {
+    background-color: var(--card-bg);
+    color: var(--text-color-light); /* Default text color for light theme */
+    border: 1px solid var(--card-border);
+}
+
+body.dark-theme #listaProductos li {
+    color: var(--text-color-dark); /* Text color for dark theme */
+}
+
+/* Ensure cart items and search field are visible */
+#contenedorCarrito {
+    background-color: var(--card-bg);
+    color: var(--text-color-light); /* Default text color for light theme */
+}
+
+body.dark-theme #contenedorCarrito {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark); /* Adjust text color for dark theme */
+}
+
+/* Ensure text visibility for search field */
+#campoBusqueda {
+    background-color: var(--card-bg);
+    color: var(--text-color-light);
+    border: 1px solid var(--card-border);
+}
+
+body.dark-theme #campoBusqueda {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+    border-color: var(--text-color-dark);
+}
+
+/* Product images adjustments */
+#listaProductos img {
+    border: 2px solid var(--card-border);
+    border-radius: 8px;
+}
+
+body.dark-theme #listaProductos img {
+    border-color: var(--text-color-dark);
+}
+
+/* Ensure product names are visible in dark theme */
+body.dark-theme #listaProductos li {
+    background-color: var(--bg-color-dark); /* Ensure a contrasting background */
+    color: var(--text-color-light); /* Light text for dark background */
+    border: 1px solid var(--text-color-light); /* Light border for visibility */
+}
+
+/* Ensure cart items and search field are visible in dark theme */
+body.dark-theme #contenedorCarrito {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-light);
+    border: 1px solid var(--text-color-light);
+}
+
+body.dark-theme #campoBusqueda {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-light);
+    border-color: var(--text-color-light);
+}
+
+/* Ensure proper contrast for product images in dark theme */
+body.dark-theme #listaProductos img {
+    border-color: var(--text-color-light); /* Light border around images */
+}
+
+/* Light theme: dark text */
+body {
+    color: var(--text-color-light);
+}
+
+#listaProductos li,
+#contenedorCarrito,
+#campoBusqueda {
+    background-color: var(--card-bg);
+    color: var(--text-color-light); /* Black text for light theme */
+    border: 1px solid var(--card-border);
+}
+
+/* Dark theme: white text */
+body.dark-theme {
+    color: var(--text-color-dark);
+}
+
+body.dark-theme #listaProductos li,
+body.dark-theme #contenedorCarrito,
+body.dark-theme #campoBusqueda {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark); /* White text for dark theme */
+    border: 1px solid var(--text-color-dark);
+}
+
+/* Product image adjustments for themes */
+#listaProductos img {
+    border: 2px solid var(--card-border);
+    border-radius: 8px;
+}
+
+body.dark-theme #listaProductos img {
+    border-color: var(--text-color-dark); /* Light border for images in dark mode */
+}
+
+/* Cart items styles */
+#listaCarrito li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border-bottom: 1px solid var(--card-border);
+    color: var(--text-color-light);
+}
+
+/* Delete button for cart items */
+#listaCarrito li button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 3px 6px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+#listaCarrito li button:hover {
+    background-color: #ff6666;
+}
+
+/* Dark theme adjustments for cart items */
+body.dark-theme #listaCarrito li {
+    color: var(--text-color-dark);
+    border-color: var(--text-color-dark);
+}
+
+body.dark-theme #listaCarrito li button {
+    background-color: var(--text-color-dark);
+    color: var(--bg-color-dark);
+}
+
+body.dark-theme #listaCarrito li button:hover {
+    background-color: #666;
+    color: white;
+}
+
+/* Ensure cart items are visible in dark mode */
+body.dark-theme #listaCarrito li {
+    background-color: var(--bg-color-dark); /* Dark background for dark mode */
+    color: var(--text-color-dark); /* White text for dark mode */
+    border-bottom: 1px solid var(--text-color-dark); /* Border matches text color */
+}
+
+/* Ensure delete button matches dark theme */
+body.dark-theme #listaCarrito li button {
+    background-color: var(--text-color-dark);
+    color: var(--bg-color-dark);
+    border: 1px solid var(--text-color-dark);
+}
+
+body.dark-theme #listaCarrito li button:hover {
+    background-color: #666; /* Slightly lighter hover background */
+    color: white;
+}
+
+/* Reducir aún más el tamaño de los productos en la fila horizontal */
+#listaProductos {
+    display: flex;
+    justify-content: space-evenly; /* Espaciado uniforme */
+    flex-wrap: nowrap; /* Evitar que se envuelvan en varias filas */
+    gap: 5px; /* Reducir el espacio entre productos */
+}
+
+#listaProductos li {
+    flex: 0 1 20%; /* Cada producto ocupa el 20% del ancho del contenedor */
+    max-width: 20%; /* Limitar el ancho máximo al 20% */
+    box-sizing: border-box; /* Incluir bordes y relleno en el tamaño total */
+    text-align: center; /* Centrar el contenido dentro de cada producto */
+}
+
+#listaProductos img {
+    max-width: 100%; /* Asegurar que las imágenes no excedan su contenedor */
+    height: auto; /* Mantener las proporciones de las imágenes */
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    border: 2px solid var(--card-border);
+}
