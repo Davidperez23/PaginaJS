@@ -1,0 +1,355 @@
+:root {
+    --bg-color-light: #f9f9f9;
+    --text-color-light: #333333;
+    --bg-color-dark: #1a1a1a;
+    --text-color-dark: #f9f9f9;
+    --accent-color: #ff0000;
+    --card-bg: #ffffff;
+    --card-border: #dddddd;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    transition: all 0.3s;
+}
+
+body.dark-theme {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: white;
+}
+
+header h1 {
+    font-size: 24px;
+    text-align: center;
+    flex: 1;
+}
+
+header button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+main {
+    padding: 20px;
+}
+
+#listaProductos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0;
+}
+
+#listaProductos li {
+    list-style: none;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+#listaProductos li:hover {
+    transform: scale(1.05);
+    border-color: var(--accent-color);
+}
+
+#listaProductos img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Centrar productos */
+#listaProductos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilo del contenedor del carrito */
+#contenedorCarrito {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contenedorCarrito h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+#campoBusqueda {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#totalCarrito {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+#codigoDescuento {
+    width: 80%;
+    padding: 5px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#aplicarDescuento {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+#aplicarDescuento:hover {
+    background-color: #ff6666;
+}
+
+
+/* Lista de elementos del carrito */
+#listaCarrito {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#listaCarrito li {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Asegurar que el color de la fuente sea siempre visible */
+body {
+    color: var(--text-color-light); /* Texto en tema claro */
+}
+
+body.dark-theme {
+    color: var(--text-color-dark); /* Texto en tema oscuro */
+}
+
+#contenedorCarrito, #campoBusqueda, #listaCarrito {
+    background-color: var(--card-bg);
+    color: inherit; /* Heredar color del padre para contraste */
+}
+
+header, footer {
+    background-color: var(--accent-color);
+    color: white; /* Asegurar que el texto sea siempre visible contra el color de fondo */
+}
+
+#listaProductos li {
+    color: var(--text-color-light);
+}
+
+body.dark-theme #listaProductos li {
+    color: var(--text-color-dark);
+}
+
+/* Asegurar que los nombres de productos sean siempre visibles */
+#listaProductos li {
+    background-color: var(--card-bg);
+    color: var(--text-color-light); /* Texto en tema claro */
+    border: 1px solid var(--card-border);
+}
+
+body.dark-theme #listaProductos li {
+    color: var(--text-color-dark); /* Texto en tema oscuro */
+}
+
+/* Asegurar que los elementos del carrito y el campo de búsqueda sean visibles */
+#contenedorCarrito {
+    background-color: var(--card-bg);
+    color: var(--text-color-light); /* Texto por defecto en tema claro */
+}
+
+body.dark-theme #contenedorCarrito {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark); /* Ajuste de texto para tema oscuro */
+}
+
+/* Asegurar visibilidad del texto para el campo de búsqueda */
+#campoBusqueda {
+    background-color: var(--card-bg);
+    color: var(--text-color-light);
+    border: 1px solid var(--card-border);
+}
+
+body.dark-theme #campoBusqueda {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+    border-color: var(--text-color-dark);
+}
+
+/* Ajustes de imágenes de productos */
+#listaProductos img {
+    border: 2px solid var(--card-border);
+    border-radius: 8px;
+}
+
+body.dark-theme #listaProductos img {
+    border-color: var(--text-color-dark);
+}
+
+/* Estilos de elementos del carrito */
+#listaCarrito li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border-bottom: 1px solid var(--card-border);
+    color: var(--text-color-light);
+}
+
+/* Botón para eliminar elementos del carrito */
+#listaCarrito li button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 3px 6px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+#listaCarrito li button:hover {
+    background-color: #ff6666;
+}
+
+/* Ajustes para tema oscuro en elementos del carrito */
+body.dark-theme #listaCarrito li {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+    border-color: var(--text-color-dark);
+}
+
+body.dark-theme #listaCarrito li button {
+    background-color: var(--text-color-dark);
+    color: var(--bg-color-dark);
+}
+
+body.dark-theme #listaCarrito li button:hover {
+    background-color: #666;
+    color: white;
+}
+
+/* Reducir el tamaño de los productos en la fila horizontal */
+#listaProductos {
+    display: flex;
+    justify-content: space-evenly; 
+    flex-wrap: nowrap; 
+    gap: 5px; 
+}
+
+#listaProductos li {
+    flex: 0 1 20%; 
+    max-width: 20%; 
+    box-sizing: border-box; 
+    text-align: center; 
+}
+
+#listaProductos img {
+    max-width: 100%; 
+    height: auto; 
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    border: 2px solid var(--card-border);
+}
+
+/* Estilo para lista de productos */
+#listaProductos li {
+    color: var(--text-color-light); /* Texto en tema claro */
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    transition: all 0.3s; /* Suavizar el cambio de tema */
+}
+
+body.dark-theme #listaProductos li {
+    color: var(--text-color-dark); /* Texto en tema oscuro */
+    background-color: var(--bg-color-dark); /* Fondo del tema oscuro */
+    border-color: var(--text-color-dark);
+}
+
+/* Estilo para textos dentro de los contenedores de productos */
+#listaProductos li p {
+    color: inherit; /* Heredar color de texto del contenedor padre */
+}
+
+body.dark-theme #listaProductos li p {
+    color: inherit; /* Asegurar que herede el color del tema oscuro */
+}
+
+
+#codigoDescuento {
+    width: 80%;
+    padding: 5px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#aplicarDescuento {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+#aplicarDescuento:hover {
+    background-color: #ff6666;
+}
